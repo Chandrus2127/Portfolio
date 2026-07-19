@@ -1,0 +1,592 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#081b29;
+    color:#fff;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:240px;
+    height:100vh;
+    background:#112e42;
+    padding:30px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.logo{
+    text-align:center;
+}
+
+.logo-circle{
+    width:80px;
+    height:80px;
+    margin:auto;
+    border-radius:50%;
+    background:#00abf0;
+    color:#081b29;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo h2{
+    margin-top:15px;
+}
+
+.logo p{
+    color:#b8c7d1;
+    font-size:14px;
+    margin-top:5px;
+}
+
+.sidebar nav{
+    margin:40px 0;
+}
+
+.sidebar nav a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 15px;
+    margin:10px 0;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.sidebar nav a i{
+    width:25px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active{
+    background:#00abf0;
+}
+
+.social{
+    text-align:center;
+}
+
+.social a{
+    color:white;
+    font-size:22px;
+    margin:0 12px;
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.content{
+    margin-left:240px;
+    padding:60px;
+}
+
+/* ===========================
+   HOME
+=========================== */
+
+.home{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:80vh;
+    gap:40px;
+}
+
+.home-text{
+    width:55%;
+}
+
+.home-text h4{
+    color:#00abf0;
+}
+
+.home-text h1{
+    font-size:60px;
+    margin:10px 0;
+}
+
+.home-text h2{
+    margin-bottom:8px;
+}
+
+.home-text h3{
+    color:#b8c7d1;
+    margin-bottom:20px;
+}
+
+.home-text p{
+    color:#d9d9d9;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttons a{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    background:#00abf0;
+    padding:12px 22px;
+    border-radius:8px;
+    margin-right:15px;
+    transition:.3s;
+}
+
+.buttons a:hover{
+    background:#0288c7;
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.home-image{
+    width:45%;
+    text-align:center;
+}
+
+.home-image img{
+    width:340px;
+    height:340px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #00abf0;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#112e42;
+    text-align:center;
+    padding:25px;
+    border-radius:10px;
+}
+
+.card h2{
+    color:#00abf0;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+    }
+
+    .content{
+        margin-left:0;
+        padding:30px;
+    }
+
+    .home{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .home-text,
+    .home-image{
+        width:100%;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .home-image img{
+        width:250px;
+        height:250px;
+    }
+
+    .home-text h1{
+        font-size:42px;
+    }
+
+}
+/* ========== Education Page ========== */
+
+.title{
+    font-size:32px;
+    margin-bottom:25px;
+    color:#fff;
+    border-left:5px solid #3b82f6;
+    padding-left:12px;
+}
+
+.edu-card{
+    background:#1f2937;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:25px;
+    border-left:6px solid #3b82f6;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.edu-card:hover{
+    transform:translateY(-5px);
+    border-left-color:#22c55e;
+}
+
+.edu-card h2{
+    color:#3b82f6;
+    margin-bottom:10px;
+}
+
+.edu-card h3{
+    color:#fff;
+    margin-bottom:12px;
+}
+
+.edu-card p{
+    color:#d1d5db;
+    margin:8px 0;
+    line-height:1.6;
+}
+
+.edu-card strong{
+    color:#f59e0b;
+}
+
+/* ========== Skills ========== */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:20px 0 35px;
+}
+
+.skills span{
+    padding:8px 18px;
+    border-radius:20px;
+    color:#fff;
+    font-weight:600;
+    transition:.3s;
+}
+
+/* Different colors */
+
+.skills span:nth-child(1),
+.skills span:nth-child(2),
+.skills span:nth-child(3){
+    background:#22c55e;
+}
+
+.skills span:nth-child(4),
+.skills span:nth-child(5){
+    background:#3b82f6;
+}
+
+.skills span:nth-child(6),
+.skills span:nth-child(7){
+    background:#6b7280;
+}
+
+.skills span:nth-child(8){
+    background:#f59e0b;
+}
+
+.skills span:hover{
+    transform:scale(1.08);
+}
+/* ===== Internship ===== */
+
+.exp-card{
+    background:#1f2937;
+    border-left:6px solid #3b82f6;
+    border-radius:12px;
+    padding:20px;
+    margin:25px 0;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.card-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.company-logo img{
+    width:90px;
+    transition:.3s;
+}
+
+.exp-card:hover{
+    background:#273548;
+    transform:translateY(-5px);
+}
+
+.internship:hover{
+    border-left-color:#22c55e;
+}
+
+.acm{
+    border-left-color:#a855f7;
+}
+
+.acm:hover{
+    border-left-color:#f59e0b;
+}
+
+.exp-card h2{
+    color:#3b82f6;
+    margin-bottom:8px;
+}
+
+.exp-card h3{
+    color:#fff;
+    margin-bottom:8px;
+}
+
+.date{
+    color:#f59e0b;
+    margin-bottom:12px;
+}
+
+.exp-card ul{
+    padding-left:20px;
+    color:#d1d5db;
+}
+
+.exp-card li{
+    margin:8px 0;
+}
+
+.exp-card:hover .company-logo img{
+    transform:scale(1.1);
+}
+/* ===== Projects ===== */
+
+.project-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    background:#1f2937;
+    padding:20px;
+    margin:25px 0;
+    border-radius:12px;
+    border-left:6px solid #3b82f6;
+    transition:.3s;
+}
+
+.project-card:hover{
+    background:#273548;
+    border-left-color:#22c55e;
+    transform:translateY(-5px);
+}
+
+.project-info{
+    flex:1;
+}
+
+.project-info h2{
+    color:#fff;
+    margin-bottom:12px;
+}
+
+.project-info span{
+    color:#f59e0b;
+}
+
+.project-info ul{
+    padding-left:20px;
+    color:#d1d5db;
+    margin-top:15px;
+}
+
+.project-info li{
+    margin:10px 0;
+}
+
+.project-logo img{
+    width:100px;
+    transition:.3s;
+}
+
+.project-card:hover .project-logo img{
+    transform:scale(1.1);
+}
+/* Contact */
+
+.contact-card{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    padding:20px;
+    margin:20px 0;
+    background:#1f2937;
+    border-radius:12px;
+    border-left:6px solid;
+    transition:.3s;
+}
+
+.contact-card:hover{
+    background:#273548;
+    transform:translateY(-5px);
+}
+
+.contact-card i{
+    font-size:30px;
+    color:#fff;
+}
+
+.contact-card h2{
+    color:#fff;
+}
+
+.contact-card p,
+.contact-card a{
+    color:#d1d5db;
+    text-decoration:none;
+}
+
+.email{border-color:#3b82f6;}
+.phone{border-color:#22c55e;}
+.location{border-color:#f59e0b;}
+.social-card{border-color:#a855f7;}
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:15px;
+    margin-left:240px;
+    background:#111827;
+    color:#cbd5e1;
+    border-top:1px solid #2d3748;
+}
+.contact-card a{
+    color:#d1d5db;
+    text-decoration:none;
+}
+
+.contact-card a:hover{
+    color:#3b82f6;
+}
+/* Contact */
+
+.contact-card{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:#1f2937;
+    color:#fff;
+    padding:20px;
+    margin:20px 0;
+    border-radius:12px;
+    border-left:6px solid;
+    transition:.3s;
+}
+
+.contact-card:hover{
+    background:#273548;
+    transform:translateY(-5px);
+}
+
+.contact-card i{
+    font-size:30px;
+}
+
+.contact-card h2{
+    margin-bottom:6px;
+}
+
+.contact-card a{
+    color:#d1d5db;
+    text-decoration:none;
+}
+
+.contact-card a:hover{
+    color:#3b82f6;
+}
+
+.email{border-color:#3b82f6;}
+.phone{border-color:#22c55e;}
+.location{border-color:#f59e0b;}
+.social-card{border-color:#a855f7;}
+
+.page-photo img{
+    width:180px;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.company-logo img{
+    width:100px;
+    height:90px;
+    object-fit:cover;
+    border-radius:5px;
+    transition:.3s;
+}
+
+.exp-card:hover .company-logo img{
+    transform:scale(1.08);
+}
+
+.project-logo img{
+    width:300px;
+    height:200px;
+    object-fit:cover;
+    border-radius:12px;
+    transition:.3s;
+}
